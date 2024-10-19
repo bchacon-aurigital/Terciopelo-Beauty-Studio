@@ -15,6 +15,7 @@ module.exports = {
       },
       backgroundImage: {
         brownGradient: "linear-gradient(274.24deg, #B880B5 0%, #E49539 61.9%)",
+        purpleGradient: "linear-gradient(93.76deg, #E49539 0%, #865f89 50.9%)",
       },
       fontFamily: {
         levaus: ["Levaus", "sans-serif"],
