@@ -11,6 +11,12 @@ const HomePage = () => {
   };
 
   useEffect(() => {
+    // Ensure we're in the browser before adding the event listener
+    const handleMouseMove = (event) => {
+      const { clientX, clientY } = event;
+      setMousePosition({ x: clientX, y: clientY });
+    };
+
     window.addEventListener("mousemove", handleMouseMove);
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
@@ -19,17 +25,35 @@ const HomePage = () => {
 
   const planet1Style = {
     transform: `translate(${
-      (mousePosition.x - window.innerWidth / 2) / 10
-    }px, ${(mousePosition.y - window.innerHeight / 2) / 10}px)`,
+      (mousePosition.x -
+        (typeof window !== "undefined" ? window.innerWidth : 0) / 2) /
+      10
+    }px, ${
+      (mousePosition.y -
+        (typeof window !== "undefined" ? window.innerHeight : 0) / 2) /
+      10
+    }px)`,
   };
   const planet2Style = {
-    transform: `translate(${(mousePosition.x - window.innerWidth / 2) / 7}px, ${
-      (mousePosition.y - window.innerHeight / 2) / 7
+    transform: `translate(${
+      (mousePosition.x -
+        (typeof window !== "undefined" ? window.innerWidth : 0) / 2) /
+      7
+    }px, ${
+      (mousePosition.y -
+        (typeof window !== "undefined" ? window.innerHeight : 0) / 2) /
+      7
     }px)`,
   };
   const planet3Style = {
-    transform: `translate(${(mousePosition.x - window.innerWidth / 2) / 5}px, ${
-      (mousePosition.y - window.innerHeight / 2) / 5
+    transform: `translate(${
+      (mousePosition.x -
+        (typeof window !== "undefined" ? window.innerWidth : 0) / 2) /
+      5
+    }px, ${
+      (mousePosition.y -
+        (typeof window !== "undefined" ? window.innerHeight : 0) / 2) /
+      5
     }px)`,
   };
 
