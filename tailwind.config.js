@@ -13,6 +13,9 @@ module.exports = {
         brownBtn: "#E49539",
         purpleBtn: "#B880B580",
       },
+      backgroundImage: {
+        brownGradient: "linear-gradient(274.24deg, #B880B5 0%, #E49539 61.9%)",
+      },
       fontFamily: {
         levaus: ["Levaus", "sans-serif"],
         afacad: ["Afacud", "sans-serif"],
