@@ -4,7 +4,7 @@ import Image from "next/image";
 import Sidebar from "./components/sidebar";
 
 const HomePage = () => {
-  const [open, isOpen] = useState(true);
+  const [open, isOpen] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   const handleMouseMove = (event) => {
