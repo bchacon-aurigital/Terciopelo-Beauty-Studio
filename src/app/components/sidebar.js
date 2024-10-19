@@ -3,7 +3,7 @@ import Link from "next/link";
 const Sidebar = ({ open, isOpen }) => {
   return (
     <div
-      className={`fixed duration-500 z-[500] top-0 ${
+      className={`fixed duration-500 z-[500] top-0 bottom-0 ${
         open === true ? "right-0" : "-right-[1500px]"
       } w-full md:w-1/2 h-full bg-cover bg-no-repeat`}
       style={{ backgroundImage: 'url("/Images/bg-hamburguer.avif")' }}
