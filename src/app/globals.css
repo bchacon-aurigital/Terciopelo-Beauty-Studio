@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Levaus";
+  src: url("/fonts/Levaus.woff") format("woff"),
+    url("/fonts/Levaus.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Afacad";
+  src: url("/fonts/Afacad-Regular.ttf") format("truetype"),
+    url("/fonts/Afacad-VariableFont_wght.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -17,7 +33,7 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Levaus, sans-serif;
 }
 
 @layer utilities {

@@ -10,6 +10,12 @@ module.exports = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        brownBtn: "#E49539",
+        purpleBtn: "#B880B580",
+      },
+      fontFamily: {
+        levaus: ["Levaus", "sans-serif"],
+        afacad: ["Afacud", "sans-serif"],
       },
     },
   },
