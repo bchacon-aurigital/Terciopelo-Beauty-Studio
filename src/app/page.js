@@ -1,8 +1,10 @@
 "use client";
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import Sidebar from "./components/sidebar";
 
 const HomePage = () => {
+  const [open, isOpen] = useState(true);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   const handleMouseMove = (event) => {
@@ -94,23 +96,19 @@ const HomePage = () => {
             </button>
           </nav>
           <div className="flex lg:hidden items-end justify-end w-full">
-            <button className="">
+            <button onClick={() => isOpen(true)} className="">
               <img src="/Icons/hamburguer-menu.svg" />
             </button>
           </div>
         </div>
         {/* for small devices only */}
         <div className="flex sm:hidden items-center justify-center w-full h-[70px] ">
-          <img
-            src={"/Images/logo.png"}
-            alt="Logo"
-            className="h-full w-[70px]"
-          />
+          <img src={"/Icons/logo.svg"} alt="Logo" className="h-full w-[70px]" />
         </div>
       </header>
 
       {/* Main Section */}
-      <main className="flex flex-col lg:flex-row justify-center items-end relative z-10">
+      <main className="flex flex-col lg:flex-row justify-center items-center relative z-10">
         <div className="lg:w-1/2 text-center lg:text-left py-6 md:py-12 lg:py-20 px-10">
           <h2 className="text-[27px] md:text-[50px] lg:text-[80px] leading-[40px] md:leading-[70px] lg:leading-[100px]">
             DONDE LA SALUD CAPILAR Y EL ESTILO SE ENCUENTRAN
@@ -146,10 +144,11 @@ const HomePage = () => {
           />
         </div>
       </main>
+      <Sidebar isOpen={isOpen} open={open} />
 
       {/* Absolute Images */}
       <div
-        className="absolute -z-0 inset-0 flex justify-center items-center h-full"
+        className="absolute -z-0 inset-0 hidden lg:flex justify-center items-center h-full"
         style={{ pointerEvents: "none" }}
       >
         <div
