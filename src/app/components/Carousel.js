@@ -56,7 +56,7 @@ const Carousel = () => {
           </button>
 
           <div
-            className="w-full h-[390px] bg-[#251525] text-white rounded-tl-[200px] rounded-tr-[200px] py-10 px-8 text-center flex flex-col items-center justify-center space-y-4 transition-transform duration-500 ease-in-out"
+            className="w-full h-[390px] md:h-[450px] bg-[#251525] text-white rounded-tl-[200px] rounded-tr-[200px] py-10 px-8 text-center flex flex-col items-center justify-center space-y-4 transition-transform duration-500 ease-in-out"
             key={currentIndex} // This helps trigger re-render on slide change
             style={{
               transition: "opacity 0.5s ease-in-out",
