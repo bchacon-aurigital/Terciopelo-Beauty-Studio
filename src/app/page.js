@@ -4,6 +4,8 @@ import Image from "next/image";
 import Sidebar from "./components/sidebar";
 import Cards from "./components/cards";
 import Contact from "./components/contact";
+import Carousel from "./components/Carousel";
+import TiktokCarousel from "./components/TiktokCarousel";
 
 const HomePage = () => {
   const [open, isOpen] = useState(false);
@@ -182,6 +184,10 @@ const HomePage = () => {
       <Cards />
 
       <Contact />
+
+      <Carousel />
+
+      {/* <TiktokCarousel /> */}
     </>
   );
 };

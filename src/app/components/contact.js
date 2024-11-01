@@ -50,8 +50,8 @@ const Contact = () => {
         </div>
         <div className="space-y-14">
           <div className="flex justify-end">
-            <div className="steps-gradient relative w-full md:w-[85%] lg:w-[60%]">
-              <span className="bg-white  absolute h-[83px] w-[83px] flex items-center justify-center -top-12 right-12 rounded-full border-2 border-[#E49539] text-[40px] text-[#E49539]">
+            <div className="steps-gradient mt-2 space-y-3 relative w-full md:w-[85%] lg:w-[60%]">
+              <span className="bg-white  absolute h-[65px] lg:h-[83px] w-[65px] lg:w-[83px] flex items-center justify-center -top-8 lg:-top-12 right-6 lg:right-12 rounded-full border-2 border-[#E49539] text-[40px] text-[#E49539]">
                 I
               </span>
               <h3 className="text-[20px] md:text-[25px] lg:text-[32px]">
@@ -64,8 +64,8 @@ const Contact = () => {
             </div>
           </div>
           <div className="flex justify-start text-end">
-            <div className="even-steps-gradient relative w-full md:w-[85%] lg:w-[60%]">
-              <span className="bg-white  absolute h-[83px] w-[83px] flex items-center justify-center -top-12 left-12 rounded-full border-2 border-[#E49539] text-[40px] text-[#E49539]">
+            <div className="even-steps-gradient mt-2 space-y-3 relative w-full md:w-[85%] lg:w-[60%]">
+              <span className="bg-white  absolute h-[65px] lg:h-[83px] w-[65px] lg:w-[83px] flex items-center justify-center -top-8 lg:-top-12 left-6 lg:left-12 rounded-full border-2 border-[#E49539] text-[40px] text-[#E49539]">
                 II
               </span>
               <h3 className="text-[20px] md:text-[25px] lg:text-[32px]">
@@ -79,8 +79,8 @@ const Contact = () => {
             </div>
           </div>
           <div className="flex justify-end">
-            <div className="steps-gradient relative w-full md:w-[85%] lg:w-[60%]">
-              <span className="bg-white  absolute h-[83px] w-[83px] flex items-center justify-center -top-12 right-12 rounded-full border-2 border-[#E49539] text-[40px] text-[#E49539]">
+            <div className="steps-gradient mt-2 space-y-3 relative w-full md:w-[85%] lg:w-[60%]">
+              <span className="bg-white  absolute h-[65px] lg:h-[83px] w-[65px] lg:w-[83px] flex items-center justify-center -top-8 lg:-top-12 right-6 lg:right-12 rounded-full border-2 border-[#E49539] text-[40px] text-[#E49539]">
                 III
               </span>
               <h3 className="text-[20px] md:text-[25px] lg:text-[32px]">
@@ -94,8 +94,8 @@ const Contact = () => {
             </div>
           </div>
           <div className="flex justify-start text-end">
-            <div className="even-steps-gradient relative w-full md:w-[85%] lg:w-[60%]">
-              <span className="bg-white  absolute h-[83px] w-[83px] flex items-center justify-center -top-12 left-12 rounded-full border-2 border-[#E49539] text-[40px] text-[#E49539]">
+            <div className="even-steps-gradient mt-2 space-y-3 relative w-full md:w-[85%] lg:w-[60%]">
+              <span className="bg-white  absolute h-[65px] lg:h-[83px] w-[65px] lg:w-[83px] flex items-center justify-center -top-8 lg:-top-12 left-6 lg:left-12 rounded-full border-2 border-[#E49539] text-[40px] text-[#E49539]">
                 IV
               </span>
               <h3 className="text-[20px] md:text-[25px] lg:text-[32px]">
@@ -108,8 +108,8 @@ const Contact = () => {
             </div>
           </div>
           <div className="flex justify-end">
-            <div className="steps-gradient relative w-full md:w-[85%] lg:w-[60%]">
-              <span className="bg-white  absolute h-[83px] w-[83px] flex items-center justify-center -top-12 right-12 rounded-full border-2 border-[#E49539] text-[40px] text-[#E49539]">
+            <div className="steps-gradient mt-2 space-y-3 relative w-full md:w-[85%] lg:w-[60%]">
+              <span className="bg-white  absolute h-[65px] lg:h-[83px] w-[65px] lg:w-[83px] flex items-center justify-center -top-8 lg:-top-12 right-6 lg:right-12 rounded-full border-2 border-[#E49539] text-[40px] text-[#E49539]">
                 V
               </span>
               <h3 className="text-[20px] md:text-[25px] lg:text-[32px]">
@@ -122,7 +122,7 @@ const Contact = () => {
             </div>
           </div>
         </div>
-        <div className="mt-24 flex items-center justify-center space-x-4 lg:space-y-0 lg:space-x-4">
+        <div className="mt-12 md:mt-14 lg:mt-24 flex items-center justify-center space-x-4 lg:space-y-0 lg:space-x-4">
           <button className="bg-brownBtn/[83] hover:bg-brownGradient w-full  max-w-[284px] h-[73px] lg:h-[133px] text-white flex items-center px-6 py-3 rounded-[15px] text-[13px] md:text-[20px] lg:text-[30px] leading-[15px] md:leading-[22px] lg:leading-[32px] ">
             <img
               src="/Icons/agenda-icon.svg"
