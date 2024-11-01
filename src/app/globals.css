@@ -79,3 +79,18 @@ body {
 .rotate-y-180 {
   transform: rotateY(180deg);
 }
+
+.steps-gradient {
+  background: linear-gradient(274.24deg, #b880b5 0%, #e49539 61.9%);
+  border-radius: 10px;
+  padding: 15px 25px;
+  width: 100%; /* Default for small screens */
+}
+
+.even-steps-gradient {
+  background: linear-gradient(94.24deg, #b880b5 0%, #e49539 61.9%);
+  border-radius: 10px;
+  padding: 15px 25px;
+  width: 100%; /* Default for small screens */
+}
+
