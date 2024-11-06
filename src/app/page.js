@@ -5,9 +5,11 @@ import Sidebar from "./components/sidebar";
 import Cards from "./components/cards";
 import Contact from "./components/contact";
 import Carousel from "./components/Carousel";
-import TiktokCarousel from "./components/TiktokCarousel";
+import ContactForm from "./components/ContactForm";
+import ThreeCards from "./components/ThreeCards";
 
 const HomePage = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [open, isOpen] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
@@ -64,7 +66,7 @@ const HomePage = () => {
   };
 
   return (
-    <>
+    <div className="relative">
       <div
         style={{
           background:
@@ -136,7 +138,10 @@ const HomePage = () => {
                 />
                 AGENDA UNA CITA
               </button>
-              <button className="bg-purpleBtn/50 hover:bg-purpleGradient w-full max-w-[284px] lg:h-[133px] text-white flex items-center px-6 py-3 rounded-[15px]  text-[13px] md:text-[20px] lg:text-[30px] leading-[15px] md:leading-[22px] lg:leading-[32px] ">
+              <button
+                onClick={() => setIsModalOpen(!isModalOpen)}
+                className="bg-purpleBtn/50 hover:bg-purpleGradient w-full max-w-[284px] lg:h-[133px] text-white flex items-center px-6 py-3 rounded-[15px]  text-[13px] md:text-[20px] lg:text-[30px] leading-[15px] md:leading-[22px] lg:leading-[32px] "
+              >
                 <img
                   src="/Icons/eye (1).svg"
                   className="w-[30px] h-[30px] md:w-auto md:h-auto"
@@ -153,7 +158,12 @@ const HomePage = () => {
             />
           </div>
         </main>
-        <Sidebar isOpen={isOpen} open={open} />
+        <Sidebar
+          isOpen={isOpen}
+          open={open}
+          setIsModalOpen={setIsModalOpen}
+          isModalOpen={isModalOpen}
+        />
 
         {/* Absolute Images */}
         <div
@@ -181,14 +191,20 @@ const HomePage = () => {
         </div>
       </div>
 
-      <Cards />
+      <ThreeCards />
 
-      <Contact />
+      <Cards setIsModalOpen={setIsModalOpen} isModalOpen={isModalOpen} />
+      <div>
+        <ContactForm
+          isModalOpen={isModalOpen}
+          setIsModalOpen={setIsModalOpen}
+        />
+      </div>
+
+      <Contact setIsModalOpen={setIsModalOpen} isModalOpen={isModalOpen} />
 
       <Carousel />
-
-      {/* <TiktokCarousel /> */}
-    </>
+    </div>
   );
 };
 

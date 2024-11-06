@@ -1,6 +1,6 @@
 import React from "react";
 
-const Contact = () => {
+const Contact = ({ setIsModalOpen, isModalOpen }) => {
   return (
     <div
       style={{ backgroundImage: "url('/Images/bg-stars.avif')" }}
@@ -131,7 +131,10 @@ const Contact = () => {
             />
             AGENDA UNA CITA
           </button>
-          <button className="bg-[#B880B5] hover:bg-[#a767a4] w-full max-w-[284px] h-[73px] lg:h-[133px] text-white flex items-center px-6 py-3 rounded-[15px] text-[13px] md:text-[20px] lg:text-[30px] leading-[15px] md:leading-[22px] lg:leading-[32px] ">
+          <button
+            onClick={() => setIsModalOpen(!isModalOpen)}
+            className="bg-[#B880B5] hover:bg-[#a767a4] w-full max-w-[284px] h-[73px] lg:h-[133px] text-white flex items-center px-6 py-3 rounded-[15px] text-[13px] md:text-[20px] lg:text-[30px] leading-[15px] md:leading-[22px] lg:leading-[32px] "
+          >
             <img
               src="/Icons/eye (1).svg"
               className="w-[30px] h-[30px] md:w-auto md:h-auto"

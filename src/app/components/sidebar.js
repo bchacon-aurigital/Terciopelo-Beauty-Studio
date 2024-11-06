@@ -1,6 +1,6 @@
 import Link from "next/link";
 // import bg from "../../../public/Images/bg-hamburguer.avif";
-const Sidebar = ({ open, isOpen }) => {
+const Sidebar = ({ open, isOpen, setIsModalOpen, isModalOpen }) => {
   return (
     <div
       className={`fixed duration-500 z-[500] top-0 bottom-0 ${
@@ -39,7 +39,10 @@ const Sidebar = ({ open, isOpen }) => {
               />
               AGENDA UNA CITA
             </button>
-            <button className="bg-purpleBtn/50 hover:bg-purpleGradient w-full max-w-[284px] lg:h-[133px] text-white flex items-center px-6 py-3 rounded-[15px]  text-[13px] md:text-[20px] lg:text-[30px] leading-[15px] md:leading-[22px] lg:leading-[32px] ">
+            <button
+              onClick={() => setIsModalOpen(!isModalOpen)}
+              className="bg-purpleBtn/50 hover:bg-purpleGradient w-full max-w-[284px] lg:h-[133px] text-white flex items-center px-6 py-3 rounded-[15px]  text-[13px] md:text-[20px] lg:text-[30px] leading-[15px] md:leading-[22px] lg:leading-[32px] "
+            >
               <img
                 src="/Icons/eye (1).svg"
                 className="w-[30px] h-[30px] md:w-auto md:h-auto"

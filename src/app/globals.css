@@ -93,3 +93,17 @@ body {
   padding: 20px 25px;
   width: 100%; /* Default for small screens */
 }
+
+.button-gradient:hover {
+  background: linear-gradient(
+    102.36deg,
+    rgba(184, 128, 181, 0.5) 0.81%,
+    rgba(197, 134, 144, 0.5) 45.73%,
+    rgba(228, 149, 57, 0.5) 96.39%
+  );
+}
+
+.button-border-gradient {
+  border: 2px solid;
+  border-image-source: linear-gradient(97.01deg, #b880b5 3.23%, #e49539 95.58%);
+}
