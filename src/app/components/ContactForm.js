@@ -83,9 +83,10 @@ const ContactForm = ({ isModalOpen, setIsModalOpen }) => {
         isModalOpen ? "right-0" : "-right-[1500px]"
       } top-0 h-screen z-50 md:w-1/2 py-5 duration-300 px-10 2xl:p-10 rounded-lg shadow-lg backdrop-blur-md bg-opacity-70`}
     >
-      <h1 className="text-center text-pink-200 mb-5 text-2xl font-semibold">
+      <img src="/Icons/logo.svg" className="h-12 w-12 mx-auto my-4" />
+      {/* <h1 className="text-center text-pink-200 mb-5 text-2xl font-semibold">
         Formulario de Contacto
-      </h1>
+      </h1> */}
       <form className="space-y-6" onSubmit={handleSubmit}>
         <div className="grid grid-cols-2 gap-4">
           <div className="space-y-4 2xl:space-y-6">
