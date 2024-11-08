@@ -107,3 +107,7 @@ body {
   border: 2px solid;
   border-image-source: linear-gradient(97.01deg, #b880b5 3.23%, #e49539 95.58%);
 }
+
+.footer-gradient {
+  background: radial-gradient(65% 65% at 50% 52.59%, #735383 0%, #413345 100%);
+}

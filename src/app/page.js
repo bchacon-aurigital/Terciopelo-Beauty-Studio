@@ -7,6 +7,7 @@ import Contact from "./components/contact";
 import Carousel from "./components/Carousel";
 import ContactForm from "./components/ContactForm";
 import ThreeCards from "./components/ThreeCards";
+import Footer from "./components/Footer";
 
 const HomePage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -204,6 +205,8 @@ const HomePage = () => {
       <Contact setIsModalOpen={setIsModalOpen} isModalOpen={isModalOpen} />
 
       <Carousel />
+
+      <Footer />
     </div>
   );
 };
