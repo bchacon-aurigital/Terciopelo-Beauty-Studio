@@ -218,10 +218,10 @@ const ContactForm = ({ isModalOpen, setIsModalOpen }) => {
               </label>
               <div className="w-full space-y-1 2xl:space-y-2">
                 {[
-                  { label: "Corto", imageUrl: "/Images/1.jpeg" },
-                  { label: "Medio", imageUrl: "/Images/2.png" },
-                  { label: "Largo", imageUrl: "/Images/3.png" },
-                  { label: "Extralargo", imageUrl: "/Images/4.png" },
+                  { label: "Corto", imageUrl: "/Images/1.avif" },
+                  { label: "Medio", imageUrl: "/Images/2.avif" },
+                  { label: "Largo", imageUrl: "/Images/3.avif" },
+                  { label: "Extralargo", imageUrl: "/Images/4.avif" },
                 ].map((length, index) => (
                   <button
                     key={index}

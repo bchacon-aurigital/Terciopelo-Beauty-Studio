@@ -20,10 +20,7 @@ const Contact = ({ setIsModalOpen, isModalOpen }) => {
             haga sentir increible.
           </p>
           <div className="rounded-[10px] hidden lg:block h-[200px] w-[85%] mx-auto overflow-hidden  border=[#ECDA98] border-2">
-            <img
-              src="/Images/map-lg.png"
-              className="h-full w-full object-cover"
-            />
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.707304126917!2d-84.06858842403952!3d9.958292490145022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e58846e0fb53%3A0xc23b75751d5a4681!2sTerciopelo%20Beauty%20Studio!5e0!3m2!1ses!2scr!4v1730997251038!5m2!1ses!2scr"  className="w-full h-full" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
         <div className="min-w-[40%]">
