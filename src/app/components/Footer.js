@@ -1,6 +1,6 @@
 import { FaInstagram, FaTiktok, FaWhatsapp } from "react-icons/fa";
 
-export default function Footer() {
+const Footer = ({ setIsModalOpen, isModalOpen }) => {
   return (
     <footer className="relative footer-gradient overflow-hidden text-white py-10 px-6">
       <div className=" max-w-6xl mx-auto flex flex-col lg:flex-row justify-between gap-[50px] lg:gap-0 items-start text-center md:text-left">
@@ -17,10 +17,18 @@ export default function Footer() {
 
           {/* Social Icons */}
           <div className="flex mt-4 space-x-4 text-2xl">
-            <img src="/Icons/Instagram.svg" className="cursor-pointer" />
-            <img src="/Icons/Tiktok.svg" className="cursor-pointer" />
-            <img src="/Icons/Whatsapp.svg" className="cursor-pointer" />
-            <img src="/Icons/Waze.svg" className="cursor-pointer" />
+            <a href="https://www.instagram.com/terciopelobeauty/" target="_blank" rel="noopener noreferrer">
+              <img src="/Icons/Instagram.svg" className="cursor-pointer" alt="Instagram" />
+            </a>
+            <a href="https://www.tiktok.com/@nicollepitty" target="_blank" rel="noopener noreferrer">
+              <img src="/Icons/Tiktok.svg" className="cursor-pointer" alt="TikTok" />
+            </a>
+            <a href="https://wa.me/50689632882" target="_blank" rel="noopener noreferrer">
+              <img src="/Icons/Whatsapp.svg" className="cursor-pointer" alt="WhatsApp" />
+            </a>
+            <a href="https://waze.com/ul?q=Terciopelo Beauty Studio&ll=9.958292,-84.066013&navigate=yes" target="_blank" rel="noopener noreferrer">
+              <img src="/Icons/Waze.svg" className="cursor-pointer" alt="Waze" />
+            </a>
           </div>
         </div>
 
@@ -37,22 +45,22 @@ export default function Footer() {
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-gray-300">
+                  <a href="#services" className="hover:text-gray-300">
                     Servicios
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-gray-300">
+                  <a href="#studio" className="hover:text-gray-300">
                     Estudio
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-gray-300">
+                  <a href="#process" className="hover:text-gray-300">
                     Proceso
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-gray-300">
+                  <a href="#testimonials" className="hover:text-gray-300">
                     Testimonios
                   </a>
                 </li>
@@ -64,34 +72,33 @@ export default function Footer() {
               <h3 className="font-semibold mb-[20px]">SOCIAL</h3>
               <ul className="space-y-[20px]">
                 <li>
-                  <a href="#" className="hover:text-gray-300">
+                  <a href="https://www.tiktok.com/@nicollepitty" className="hover:text-gray-300">
                     Tiktok
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-gray-300">
+                  <a href="https://www.instagram.com/terciopelobeauty/" className="hover:text-gray-300">
                     Instagram
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-gray-300">
+                  <a href="https://wa.me/50689632882" className="hover:text-gray-300">
                     Whatsapp
                   </a>
                 </li>
               </ul>
             </div>
-
             {/* Actions Links */}
             <div>
               <h3 className="font-semibold mb-[20px]">ACCIONES</h3>
               <ul className="space-y-[20px]">
                 <li>
-                  <a href="#" className="hover:text-gray-300">
+                  <a href="#Agenda" className="hover:text-gray-300">
                     Agenda
                   </a>
                 </li>
-                <li>
-                  <a href="#" className="hover:text-gray-300">
+                <li onClick={() => setIsModalOpen(!isModalOpen)}>
+                  <a onClick={() => setIsModalOpen(!isModalOpen)} className="hover:text-gray-300">
                     Cotiza
                   </a>
                 </li>
@@ -110,4 +117,6 @@ export default function Footer() {
       </div>
     </footer>
   );
-}
+};
+
+export default Footer;

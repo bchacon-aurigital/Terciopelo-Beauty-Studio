@@ -12,9 +12,17 @@
 
 @font-face {
   font-family: "Afacad";
-  src: url("/fonts/Afacad-Regular.ttf") format("truetype"),
-    url("/fonts/Afacad-VariableFont_wght.ttf") format("truetype");
-  font-weight: 400;
+  src: url("/fonts/Vollkorn-Regular.ttf") format("truetype"),
+    url("/fonts/Vollkorn-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Vollkorn";
+  src: url("/fonts/Vollkorn-Regular.ttf") format("truetype"),
+    url("/fonts/Vollkorn-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100;
   font-style: normal;
 }
 

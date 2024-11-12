@@ -1,13 +1,15 @@
 "use client";
-import { useEffect, useState } from "react";
-import Image from "next/image";
-import Sidebar from "./components/sidebar";
-import Cards from "./components/cards";
-import Contact from "./components/contact";
-import Carousel from "./components/Carousel";
-import ContactForm from "./components/ContactForm";
-import ThreeCards from "./components/ThreeCards";
-import Footer from "./components/Footer";
+import { useEffect, useState, lazy } from "react";
+import Image from "next/image"
+const Sidebar = lazy(() => import("./components/sidebar"));
+const Cards = lazy(() => import("./components/cards"));
+const Contact = lazy(() => import("./components/contact"));
+const Carousel = lazy(() => import("./components/Carousel"));
+const ContactForm = lazy(() => import("./components/ContactForm"));
+const ThreeCards = lazy(() => import("./components/ThreeCards"));
+const TikTok = lazy(() => import("./components/TikTok"));
+const Footer = lazy(() => import("./components/Footer"));
+const CalendarWidget = lazy(() => import("./components/CalendarWidget"));
 
 const HomePage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -67,7 +69,7 @@ const HomePage = () => {
   };
 
   return (
-    <div className="relative">
+    <div className="relative overflow-x-hidden">
       <div
         style={{
           background:
@@ -76,7 +78,7 @@ const HomePage = () => {
         className="min-h-screen relative text-white overflow-hidden"
       >
         {/* Header */}
-        <header className=" z-50 py-6 px-4 md:px-7 lg:px-10">
+        <header className=" z-50 py-6 px-4 md:px-7 lg:px-10 lg:ml-10">
           <div className="flex justify-between items-center w-full">
             <div className="hidden sm:flex items-center space-x-3 w-[90px] max-w-[153px] h-[90px] max-h-[153px]">
               <img
@@ -99,7 +101,9 @@ const HomePage = () => {
               <a href="#testimonials" className="hover:underline">
                 Testimonios
               </a>
-              <button className="bg-brownBtn hover:bg-brownGradient text-white px-[16px] py-[10px] rounded-[10px]">
+              <button
+              onClick={() => document.getElementById("Agenda").scrollIntoView({ behavior: "smooth" })}
+              className="bg-brownBtn hover:bg-brownGradient text-white px-[16px] py-[10px] rounded-[10px]">
                 Agenda una cita
               </button>
             </nav>
@@ -110,29 +114,28 @@ const HomePage = () => {
             </div>
           </div>
           {/* for small devices only */}
-          <div className="flex sm:hidden items-center justify-center w-full h-[70px] ">
+          <div className="flex sm:hidden items-center justify-center w-full h-[90px] ">
             <img
               src={"/Icons/logo.svg"}
               alt="Logo"
-              className="h-full w-[70px]"
+              className="h-[full] w-[90px]"
             />
           </div>
         </header>
 
         {/* Main Section */}
         <main className="flex flex-col lg:flex-row justify-center items-center relative z-10">
-          <div className="lg:w-1/2 text-center lg:text-left py-6 md:py-12 lg:py-20 px-10">
-            <h2 className="text-[27px] md:text-[50px] lg:text-[80px] leading-[40px] md:leading-[70px] lg:leading-[100px]">
+          <div className="lg:w-1/2 text-center lg:text-left py-6 md:py-12 lg:py-20 px-10 lg:ml-10">
+            <h2 className="text-[27px] md:text-[50px] lg:text-[65px] leading-[40px] md:leading-[70px] lg:leading-[100px]">
               DONDE LA SALUD CAPILAR Y EL ESTILO SE ENCUENTRAN
             </h2>
-            <p className="mt-3 md:mt-6 text-[15px] leading-[20px] md:text-[20px] md:leading-[35px] font-afacad">
-              Tu cabello es una expresión única de personalidad y estilo. Con el
-              uso de tratamientos capilares personalizados para todo tipo de
-              cabello, Terciopelo Beauty te ofrece una experiencia de lujo que
-              garantiza un cabello suave, sedoso, y saludable.
+            <p className="mt-3 md:mt-6 text-[15px] leading-[20px] md:text-[17px] md:leading-[35px] font-Vollkorn">
+            Transformamos tu cabello en una expresión única de salud y estilo. Especializados en tratamientos capilares personalizados para todo tipo de cabello. Nuestro salón de belleza te ofrece servicios de lujo que garantizan un cabello suave, sedoso, y saludable.
             </p>
-            <div className="mt-8 grid grid-cols-2  space-x-4 lg:space-y-0 lg:space-x-4">
-              <button className="bg-brownBtn/[83] hover:bg-brownGradient w-full max-w-[284px] lg:h-[133px] text-white flex items-center px-6 py-3 rounded-[15px] text-[13px] md:text-[20px] lg:text-[30px] leading-[15px] md:leading-[22px] lg:leading-[32px] ">
+            <div className="mt-8 grid grid-cols-2  space-x-2 lg:space-y-0 lg:space-x-4">
+              <button 
+              onClick={() => document.getElementById("Agenda").scrollIntoView({ behavior: "smooth" })}
+              className="bg-brownBtn/[83] hover:bg-brownGradient w-full max-w-[284px] lg:h-[133px] text-white flex items-center px-6 py-3 rounded-[15px] text-[13px] md:text-[20px] 2xl:text-[30px] leading-[15px] md:leading-[22px] lg:leading-[20px] xl:leading-[30px] font-[600]">
                 <img
                   src="/Icons/agenda-icon.svg"
                   className="w-[30px] h-[30px] md:w-auto md:h-auto"
@@ -141,7 +144,7 @@ const HomePage = () => {
               </button>
               <button
                 onClick={() => setIsModalOpen(!isModalOpen)}
-                className="bg-purpleBtn/50 hover:bg-purpleGradient w-full max-w-[284px] lg:h-[133px] text-white flex items-center px-6 py-3 rounded-[15px]  text-[13px] md:text-[20px] lg:text-[30px] leading-[15px] md:leading-[22px] lg:leading-[32px] "
+                className="bg-purpleBtn/50 hover:bg-purpleGradient w-full max-w-[284px] lg:h-[133px] text-white flex items-center px-6 py-3 rounded-[15px]  text-[13px] md:text-[20px] 2xl:text-[30px] leading-[15px] md:leading-[22px] lg:leading-[20px] xl:leading-[30px] font-[600]" 
               >
                 <img
                   src="/Icons/eye (1).svg"
@@ -151,7 +154,7 @@ const HomePage = () => {
               </button>
             </div>
           </div>
-          <div className="lg:w-1/2 mt-0 md:mt-5 lg:mt-0">
+          <div className="lg:w-1/2 mt-0 md:mt-5 lg:mt-0 ">
             <img
               src={"/Images/hero-image.avif"}
               alt="Hero Image"
@@ -205,8 +208,9 @@ const HomePage = () => {
       <Contact setIsModalOpen={setIsModalOpen} isModalOpen={isModalOpen} />
 
       <Carousel />
-
-      <Footer />
+      <TikTok/>
+      <CalendarWidget />
+      <Footer setIsModalOpen={setIsModalOpen} isModalOpen={isModalOpen} />
     </div>
   );
 };

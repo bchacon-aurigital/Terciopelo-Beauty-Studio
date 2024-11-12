@@ -38,7 +38,6 @@ const ContactForm = ({ isModalOpen, setIsModalOpen }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Initialize FormData
     const formPayload = new FormData();
     formPayload.append("name", formData.name);
     formPayload.append("email", formData.email);
@@ -52,13 +51,12 @@ const ContactForm = ({ isModalOpen, setIsModalOpen }) => {
       formPayload.append("file", selectedFile);
     }
 
-    // Send data via EmailJS
     emailjs
       .sendForm(
-        "service_cspzdp9", // Replace with your EmailJS service ID
-        "template_3tavogq", // Replace with your EmailJS template ID
-        e.target, // The form element
-        "QQnBhytnVo7HZMzV1" // Replace with your EmailJS user ID
+        "service_cspzdp9",
+        "template_3tavogq",
+        e.target,
+        "QQnBhytnVo7HZMzV1"
       )
       .then(
         (result) => {
@@ -83,10 +81,16 @@ const ContactForm = ({ isModalOpen, setIsModalOpen }) => {
         isModalOpen ? "right-0" : "-right-[1500px]"
       } top-0 h-screen z-50 md:w-1/2 py-5 duration-300 px-10 2xl:p-10 rounded-lg shadow-lg backdrop-blur-md bg-opacity-70`}
     >
+      {/* Botón de cierre en la esquina superior derecha */}
+      <button
+        onClick={() => setIsModalOpen(false)}
+        className="absolute top-2 left-4 text-white text-4xl font-bold hover:text-pink-500 transition-colors"
+        style={{ backgroundColor: "transparent", border: "none", cursor: "pointer" }}
+      >
+        &times;
+      </button>
+
       <img src="/Icons/logo.svg" className="h-12 w-12 mx-auto my-4" />
-      {/* <h1 className="text-center text-pink-200 mb-5 text-2xl font-semibold">
-        Formulario de Contacto
-      </h1> */}
       <form className="space-y-6" onSubmit={handleSubmit}>
         <div className="grid grid-cols-2 gap-4">
           <div className="space-y-4 2xl:space-y-6">
@@ -161,7 +165,7 @@ const ContactForm = ({ isModalOpen, setIsModalOpen }) => {
               <label className="block text-white mb-1">
                 Agrega una fotografía de referencia
               </label>
-              <div className="space-x-4">
+              <div className="">
                 <label
                   htmlFor="file-upload"
                   className="mt-2 p-2 rounded-[10px] text-white cursor-pointer transition-colors"
@@ -254,7 +258,7 @@ const ContactForm = ({ isModalOpen, setIsModalOpen }) => {
               }}
               className=" h-[98px] flex gap-3 items-center text-[30px] mt-5 p-3 bg-[#B880B580]/60 text-white transition-colors"
             >
-              <img src="/Icons/eye (1).svg" className="w-[60px] h-auto" />
+              <img src="/Icons/eye (1).svg" className="hidden lg:block w-[60px] h-auto" />
               Enviar
             </button>
           </div>

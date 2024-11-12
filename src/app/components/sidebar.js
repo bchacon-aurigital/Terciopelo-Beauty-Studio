@@ -17,22 +17,26 @@ const Sidebar = ({ open, isOpen, setIsModalOpen, isModalOpen }) => {
         </button>
         <div className="flex flex-col items-center gap-8 mt-8 text-xl font-light tracking-widest">
           <button href="#servicios">
-            <img src="/Icons/Waze.svg" />
+             <a href="https://waze.com/ul?q=Terciopelo Beauty Studio&ll=9.958292,-84.066013&navigate=yes" target="_blank" rel="noopener noreferrer">
+              <img src="/Icons/Waze.svg" className="cursor-pointer" alt="Waze" />
+            </a>
           </button>
-          <button href="#servicios">
-            <a className="hover:text-purple-300">SERVICIOS</a>
+          <button>
+            <a href="#services" className="hover:text-purple-300">SERVICIOS</a>
           </button>
-          <button href="#estudio">
-            <a className="hover:text-purple-300">ESTÚDIO</a>
+          <button>
+            <a href="#studio" className="hover:text-purple-300">ESTÚDIO</a>
           </button>
-          <button href="#proceso">
-            <a className="hover:text-purple-300">PROCESO</a>
+          <button>
+            <a href="#process" className="hover:text-purple-300">PROCESO</a>
           </button>
-          <button href="#testimonios">
-            <a className="hover:text-purple-300">TESTIMONIOS</a>
+          <button>
+            <a href="#testimonials" className="hover:text-purple-300">TESTIMONIOS</a>
           </button>
           <div className="mt-8 grid grid-cols-2  space-x-4 lg:space-y-0 lg:space-x-4 ">
-            <button className="bg-brownBtn/[83] hover:bg-brownGradient w-full max-w-[284px] lg:h-[133px] text-white flex items-center px-6 py-3 rounded-[15px] text-[13px] md:text-[20px] lg:text-[30px] leading-[15px] md:leading-[22px] lg:leading-[32px] ">
+            <button 
+            onClick={() => document.getElementById("Agenda").scrollIntoView({ behavior: "smooth" })}
+            className="bg-brownBtn/[83] hover:bg-brownGradient w-full max-w-[284px] lg:h-[133px] text-white flex items-center px-6 py-3 rounded-[15px] text-[13px] md:text-[20px] lg:text-[30px] leading-[15px] md:leading-[22px] lg:leading-[32px] ">
               <img
                 src="/Icons/agenda-icon.svg"
                 className="w-[30px] h-[30px] md:w-auto md:h-auto"

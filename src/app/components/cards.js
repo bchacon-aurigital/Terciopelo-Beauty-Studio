@@ -46,38 +46,41 @@ const Cards = ({ setIsModalOpen, isModalOpen }) => {
       backImage: "/Images/card-back6.avif",
       title: "maquillaje",
       description:
-        "Una limpieza facial para tu tipo de piel, seguida de un maquillaje impecable y un sellador especial que repele la humedad, el sudor e incluso el agua. Ideal para manatener un maquillaje  perfecto todo el día.",
+        "Una limpieza facial para tu tipo de piel, seguida de un maquillaje impecable y un sellador especial que repele la humedad, el sudor e incluso el agua. Ideal para manatener un maquillaje perfecto todo el día.",
     },
   ];
 
   return (
-    <div className="py-[9%] px-[8%]">
-      <div className="text-center py-[8%]">
-        <h1 className="text-[20px] md:text-[45px] lg:text-[47px] text-[#B880B5] leading-[35px] md:leading-[60px] lg:leading-[80px]">
-          De un cabello sin vida y difícil de manejar, a una suavidad de
-          terciopelo
+    <div id="services"  className="flex flex-col items-center py-[4%] px-[8%]">
+      <div className="text-center pb-[8%] max-w-[1200px] w-full">
+        <h1 className="text-[28px] md:text-[45px] lg:text-[47px] text-[#B880B5] leading-[35px] md:leading-[60px] lg:leading-[80px] mb-12">
+          De un cabello sin vida y difícil de manejar, a una suavidad de terciopelo
         </h1>
-        <p className="text-[18px] md:text-[25px] lg:text-[30px] leading-[25px] md:leading-[33px] lg:leading-[40px] mb-4 font-afacad ">
-          En Terciopelo Beauty, abordamos estos problemas desde la raíz. MI
+        <p className="text-[12px] md:text-[24px]  lg:text-[24px]  leading-[25px] md:leading-[33px] lg:leading-[36px] font-Vollkorn">
+          En Terciopelo Beauty, abordamos estos problemas desde la raíz. <br /> Mi
           enfoque está centrado en la salud capilar y en crear estilos
-          personalizados. Para que hagas de tu cabello tu mejor accesorio.
+          personalizados. Para<br /> que hagas de tu cabello tu mejor accesorio.
         </p>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-[58px] py-14">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-[58px] py-14 justify-center">
           {cardData.map((card, index) => (
-            <div key={index} className="w-full min-w-[327px]">
+            <div key={index} className="w-full max-w-[327px]">
               <FlippingCard
                 frontImage={card.frontImage}
                 backImage={card.backImage}
                 title={card.title}
                 description={card.description}
+                isFirstCard={index === 0} 
               />
             </div>
           ))}
         </div>
 
         <div className="mt-8 flex items-center justify-center space-x-4 lg:space-y-0 lg:space-x-4">
-          <button className="bg-brownBtn/[83] hover:bg-brownGradient w-full  max-w-[284px] h-[73px] lg:h-[133px] text-white flex items-center px-6 py-3 rounded-[15px] text-[13px] md:text-[20px] lg:text-[30px] leading-[15px] md:leading-[22px] lg:leading-[32px] ">
+          <button 
+            onClick={() => document.getElementById("Agenda").scrollIntoView({ behavior: "smooth" })}
+            className="bg-brownBtn/[83] hover:bg-brownGradient w-full max-w-[284px] h-[73px] lg:h-[133px] text-white flex items-center px-6 py-3 rounded-[15px] text-[13px] md:text-[20px] 2xl:text-[30px] leading-[15px] md:leading-[22px] lg:leading-[20px] xl:leading-[30px]  font-[600]"
+          >
             <img
               src="/Icons/agenda-icon.svg"
               className="w-[30px] h-[30px] md:w-auto md:h-auto"
@@ -87,7 +90,7 @@ const Cards = ({ setIsModalOpen, isModalOpen }) => {
           </button>
           <button
             onClick={() => setIsModalOpen(!isModalOpen)}
-            className="bg-[#B880B5] hover:bg-[#a767a4] w-full max-w-[284px] h-[73px] lg:h-[133px] text-white flex items-center px-6 py-3 rounded-[15px] text-[13px] md:text-[20px] lg:text-[30px] leading-[15px] md:leading-[22px] lg:leading-[32px] "
+            className="bg-[#B880B5] hover:bg-[#a767a4] w-full max-w-[284px] h-[73px] lg:h-[133px] text-white flex items-center px-6 py-3 rounded-[15px] text-[13px] md:text-[20px] 2xl:text-[30px] leading-[15px] md:leading-[22px] lg:leading-[20px] xl:leading-[30px]  font-[600]"
           >
             <img
               src="/Icons/eye (1).svg"
