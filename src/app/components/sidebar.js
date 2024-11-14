@@ -22,16 +22,16 @@ const Sidebar = ({ open, isOpen, setIsModalOpen, isModalOpen }) => {
             </a>
           </button>
           <button>
-            <a href="#services" className="hover:text-purple-300">SERVICIOS</a>
+            <a href="#services" className="hover:text-purple-300 font-[600]">SERVICIOS</a>
           </button>
           <button>
-            <a href="#studio" className="hover:text-purple-300">ESTÚDIO</a>
+            <a href="#studio" className="hover:text-purple-300 font-[600]">ESTÚDIO</a>
           </button>
           <button>
-            <a href="#process" className="hover:text-purple-300">PROCESO</a>
+            <a href="#process" className="hover:text-purple-300 font-[600]">PROCESO</a>
           </button>
           <button>
-            <a href="#testimonials" className="hover:text-purple-300">TESTIMONIOS</a>
+            <a href="#testimonials" className="hover:text-purple-300 font-[600]">TESTIMONIOS</a>
           </button>
           <div className="mt-8 grid grid-cols-2  space-x-4 lg:space-y-0 lg:space-x-4 ">
             <button 
