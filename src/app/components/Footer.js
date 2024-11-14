@@ -5,7 +5,7 @@ const Footer = ({ setIsModalOpen, isModalOpen }) => {
     <footer className="relative footer-gradient overflow-hidden text-white py-10 px-6">
       <div className=" max-w-6xl mx-auto flex flex-col lg:flex-row justify-between gap-[50px] lg:gap-0 items-start text-center md:text-left">
         {/* Quote Section */}
-        <div className="z-20 flex flex-col items-center md:items-start mb-6 w-full lg:max-w-[60%] md:mb-0">
+        <div className="z-20 flex flex-col items-center md:items-start mb-6 w-full lg:max-w-[100%] md:mb-0">
           <img
             src="/Icons/logo-footer.svg"
             className="w-[70%] mx-auto h-auto mb-14 lg:hidden"
@@ -35,7 +35,7 @@ const Footer = ({ setIsModalOpen, isModalOpen }) => {
         {/* Links Section */}
         <div className=" w-full flex flex-col items-center gap-[30px]">
           {/* Site Links */}
-          <div className="w-full flex justify-start space-x-8 text-sm font-light">
+          <div className="w-full flex justify-end space-x-10 text-sm font-light">
             <div>
               <h3 className="font-semibold mb-[20px]">SITIO</h3>
               <ul className="space-y-[20px]">
