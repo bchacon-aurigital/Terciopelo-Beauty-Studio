@@ -35,7 +35,7 @@ const Footer = ({ setIsModalOpen, isModalOpen }) => {
         {/* Links Section */}
         <div className=" w-full flex flex-col items-center gap-[30px]">
           {/* Site Links */}
-          <div className="w-full flex justify-start md:justify-end space-x-10 text-sm font-light">
+          <div className="w-full flex justify-start md:justify-end space-x-8 text-sm font-light">
             <div>
               <h3 className="font-semibold mb-[20px]">SITIO</h3>
               <ul className="space-y-[20px]">
