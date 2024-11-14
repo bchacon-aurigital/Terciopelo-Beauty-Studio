@@ -56,7 +56,7 @@ const Cards = ({ setIsModalOpen, isModalOpen }) => {
         <h1 className="text-[28px] md:text-[45px] lg:text-[47px] text-[#B880B5] leading-[35px] md:leading-[60px] lg:leading-[80px] mb-12">
           De un cabello sin vida y difícil de manejar, a una suavidad de terciopelo
         </h1>
-        <p className="text-[12px] md:text-[24px]  lg:text-[24px]  leading-[25px] md:leading-[33px] lg:leading-[36px] font-afacad">
+        <p className="text-[18px] md:text-[24px]  lg:text-[24px]  leading-[25px] md:leading-[33px] lg:leading-[36px] font-afacad">
           En Terciopelo Beauty, abordamos estos problemas desde la raíz. <br /> Mi
           enfoque está centrado en la salud capilar y en crear estilos
           personalizados. Para<br /> que hagas de tu cabello tu mejor accesorio.
