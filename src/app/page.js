@@ -7,7 +7,6 @@ const Contact = lazy(() => import("./components/contact"));
 const Carousel = lazy(() => import("./components/Carousel"));
 const ContactForm = lazy(() => import("./components/ContactForm"));
 const ThreeCards = lazy(() => import("./components/ThreeCards"));
-const TikTok = lazy(() => import("./components/TikTok"));
 const Footer = lazy(() => import("./components/Footer"));
 const CalendarWidget = lazy(() => import("./components/CalendarWidget"));
 
@@ -88,7 +87,7 @@ const HomePage = () => {
               />
             </div>
 
-            <nav className="hidden lg:flex space-x-[25px] items-center text-[19px] leading-[24px]">
+            <nav className="hidden lg:flex space-x-[25px] items-center text-[19px] leading-[24px] font-[600]">
               <a href="#services" className="hover:underline">
                 Servicios
               </a>
@@ -129,30 +128,31 @@ const HomePage = () => {
             <h2 className="text-[27px] md:text-[50px] lg:text-[65px] leading-[40px] md:leading-[70px] lg:leading-[100px]">
               DONDE LA SALUD CAPILAR Y EL ESTILO SE ENCUENTRAN
             </h2>
-            <p className="mt-3 md:mt-6 text-[15px] leading-[20px] md:text-[17px] md:leading-[35px] font-Vollkorn">
+            <p className="mt-3 md:mt-6 text-[15px] leading-[20px] md:text-[17px] md:leading-[35px] font-afacad">
             Transformamos tu cabello en una expresión única de salud y estilo. Especializados en tratamientos capilares personalizados para todo tipo de cabello. Nuestro salón de belleza te ofrece servicios de lujo que garantizan un cabello suave, sedoso, y saludable.
             </p>
-            <div className="mt-8 grid grid-cols-2  space-x-2 lg:space-y-0 lg:space-x-4">
-              <button 
-              onClick={() => document.getElementById("Agenda").scrollIntoView({ behavior: "smooth" })}
-              className="bg-brownBtn/[83] hover:bg-brownGradient w-full max-w-[284px] lg:h-[133px] text-white flex items-center px-6 py-3 rounded-[15px] text-[13px] md:text-[20px] 2xl:text-[30px] leading-[15px] md:leading-[22px] lg:leading-[20px] xl:leading-[30px] font-[600]">
-                <img
-                  src="/Icons/agenda-icon.svg"
-                  className="w-[30px] h-[30px] md:w-auto md:h-auto"
-                />
-                AGENDA UNA CITA
-              </button>
-              <button
-                onClick={() => setIsModalOpen(!isModalOpen)}
-                className="bg-purpleBtn/50 hover:bg-purpleGradient w-full max-w-[284px] lg:h-[133px] text-white flex items-center px-6 py-3 rounded-[15px]  text-[13px] md:text-[20px] 2xl:text-[30px] leading-[15px] md:leading-[22px] lg:leading-[20px] xl:leading-[30px] font-[600]" 
-              >
-                <img
-                  src="/Icons/eye (1).svg"
-                  className="w-[30px] h-[30px] md:w-auto md:h-auto"
-                />
-                COTIZA UN CAMBIO DE COLOR
-              </button>
-            </div>
+            <div className="mt-8 grid grid-cols-2 gap-2 sm:flex sm:justify-center md:gap-6 justify-center lg:justify-start">
+  <button 
+    onClick={() => document.getElementById("Agenda").scrollIntoView({ behavior: "smooth" })}
+    className="bg-brownBtn/[83] hover:bg-brownGradient w-full max-w-[284px] lg:h-[133px] text-white flex items-center justify-center px-6 py-3 rounded-[15px] text-[13px] md:text-[20px] xl:text-[30px] leading-[15px] md:leading-[22px] lg:leading-[20px] xl:leading-[30px] font-[600]"
+  >
+    <img
+      src="/Icons/agenda-icon.svg"
+      className="w-[30px] h-[30px] md:w-auto md:h-auto mr-2"
+    />
+    AGENDA UNA CITA
+  </button>
+  <button
+    onClick={() => setIsModalOpen(!isModalOpen)}
+    className="bg-purpleBtn/50 hover:bg-purpleGradient w-full max-w-[284px] lg:h-[133px] text-white flex items-center justify-center px-6 py-3 rounded-[15px] text-[13px] md:text-[20px] 2xl:text-[30px] leading-[15px] md:leading-[22px] lg:leading-[20px] xl:leading-[30px] font-[600]"
+  >
+    <img
+      src="/Icons/eye (1).svg"
+      className="w-[30px] h-[30px] md:w-auto md:h-auto mr-2"
+    />
+    COTIZA UN CAMBIO DE COLOR
+  </button>
+</div>
           </div>
           <div className="lg:w-1/2 mt-0 md:mt-5 lg:mt-0 ">
             <img
@@ -208,7 +208,6 @@ const HomePage = () => {
       <Contact setIsModalOpen={setIsModalOpen} isModalOpen={isModalOpen} />
 
       <Carousel />
-      <TikTok/>
       <CalendarWidget />
       <Footer setIsModalOpen={setIsModalOpen} isModalOpen={isModalOpen} />
     </div>

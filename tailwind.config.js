@@ -19,7 +19,7 @@ module.exports = {
       },
       fontFamily: {
         levaus: ["Levaus", "sans-serif"],
-        afacad: ["Afacud", "sans-serif"],
+        afacad: ["Afacad", "sans-serif"],
         Vollkorn: ["Vollkorn", "sans-serif"],
       },
     },

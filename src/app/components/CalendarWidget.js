@@ -47,7 +47,7 @@ const CalendarWidget = () => {
         <h1 className="text-2xl lg:text-[48px] font-levaus  leading-[35px] lg:leading-[80px] text-[#C293C2]">
           RESERVA UN ESPACIO EN LA AGENDA PARA CUIDARTE Y TRANSFORMARTE
         </h1>
-        <p className="text-[18px] lg:text-[24px]  mt-4 mb-8  font-Vollkorn">
+        <p className="text-[18px] lg:text-[24px]  mt-4 mb-8  font-afacad">
           No esperes más para darle a tu cabello el cuidado que deseas. Estamos listos para escucharte, asesorarte y crear un look que refleje tu esencia, asegurando que salgas de nuestro salón sintiéndote más seguro y espectacular que nunca.
         </p>
         <div className="w-full rounded-xl overflow-hidden" style={{ height: iframeHeight }}>

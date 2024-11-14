@@ -10,7 +10,7 @@ const Footer = ({ setIsModalOpen, isModalOpen }) => {
             src="/Icons/logo-footer.svg"
             className="w-[70%] mx-auto h-auto mb-14 lg:hidden"
           />
-          <p className="text-[35px] lg:text-[50px] leading-[60px] font-light italic ">
+          <p className="text-[35px] lg:text-[40px] leading-[50px] font-light italic ">
             "LA ENERGÍA MÁS PODEROSA QUE PUEDES EJERCER ES LA DE REINVENTARTE A
             TI MISMO."
           </p>

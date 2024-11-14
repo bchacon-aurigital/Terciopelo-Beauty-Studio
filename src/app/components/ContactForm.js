@@ -10,6 +10,7 @@ const ContactForm = ({ isModalOpen, setIsModalOpen }) => {
     hairLength: "",
     techniques: [],
   });
+  const [isInstructionsVisible, setIsInstructionsVisible] = useState(false);
 
   const handleInputChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -72,16 +73,15 @@ const ContactForm = ({ isModalOpen, setIsModalOpen }) => {
 
   return (
     <div
-      style={{
-        backgroundImage: "url('/Images/bg-stars.avif')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-      className={`fixed flex flex-col justify-center ${
-        isModalOpen ? "right-0" : "-right-[1500px]"
-      } top-0 h-screen z-50 md:w-1/2 py-5 duration-300 px-10 2xl:p-10 rounded-lg shadow-lg backdrop-blur-md bg-opacity-70`}
-    >
-      {/* Botón de cierre en la esquina superior derecha */}
+    style={{
+      backgroundImage: "url('/Images/bg-stars.avif')",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+    }}
+    className={`fixed flex flex-col justify-center ${
+      isModalOpen ? "right-0" : "-right-[1500px]"
+    } top-0 h-screen z-50 lg:w-1/2 py-5 duration-300 px-10 2xl:p-10 rounded-lg shadow-lg backdrop-blur-md bg-opacity-70 overflow-y-auto max-h-screen`}
+  >
       <button
         onClick={() => setIsModalOpen(false)}
         className="absolute top-2 left-4 text-white text-4xl font-bold hover:text-pink-500 transition-colors"
@@ -95,7 +95,7 @@ const ContactForm = ({ isModalOpen, setIsModalOpen }) => {
         <div className="grid grid-cols-2 gap-4">
           <div className="space-y-4 2xl:space-y-6">
             <div>
-              <label className="block text-white mb-1">Nombre Completo</label>
+              <label className="block text-white mb-1 font-afacad">Nombre Completo</label>
               <input
                 type="text"
                 name="name"
@@ -105,7 +105,7 @@ const ContactForm = ({ isModalOpen, setIsModalOpen }) => {
               />
             </div>
             <div>
-              <label className="block text-white mb-1">Email</label>
+              <label className="block text-white mb-1 font-afacad">Email</label>
               <input
                 type="email"
                 name="email"
@@ -118,7 +118,7 @@ const ContactForm = ({ isModalOpen, setIsModalOpen }) => {
               <label className="block text-white mb-3 text-lg font-semibold">
                 Técnicas de Color
               </label>
-              <div className="space-y-1 2xl:space-y-2">
+              <div className="space-y-1 2xl:space-y-2 font-afacad text-md">
                 {[
                   "Balayage",
                   "Highlights",
@@ -137,10 +137,10 @@ const ContactForm = ({ isModalOpen, setIsModalOpen }) => {
                     <input
                       type="checkbox"
                       id={`checkbox-${index}`}
-                      className="hidden peer"
+                      className="hidden peer min-h-3 min-w-3"
                       onChange={() => handleTechniqueChange(technique)}
                     />
-                    <div className="w-4 2xl:w-5 h-4 2xl:h-5 border-2 border-white rounded-sm peer-checked:bg-pink-600 flex items-center justify-center">
+                    <div className="min-h-4 min-w-4 w-4 2xl:w-5 h-4 2xl:h-5 border-2 border-white rounded-sm peer-checked:bg-pink-600 flex items-center justify-center">
                       <svg
                         className="hidden w-2 2xl:w-3 h-2 2xl:h-3 text-white peer-checked:block"
                         fill="none"
@@ -162,42 +162,64 @@ const ContactForm = ({ isModalOpen, setIsModalOpen }) => {
               </div>
             </div>
             <div className="mt-3 2xl:mt-5">
-              <label className="block text-white mb-1">
+              <label className="block text-white mb-1 font-afacad">
                 Agrega una fotografía de referencia
               </label>
-              <div className="">
-                <label
-                  htmlFor="file-upload"
-                  className="mt-2 p-2 rounded-[10px] text-white cursor-pointer transition-colors"
+
+              <div className="mt-2 flex flex-wrap gap-4">
+                <div
+                  className="p-[2px] rounded-[10px] inline-block"
                   style={{
-                    border: "2px solid",
-                    borderImageSource:
-                      "linear-gradient(97.01deg, #b880b5 3.23%, #e49539 95.58%)",
-                    borderImageSlice: 1,
+                    background: "linear-gradient(97.01deg, #b880b5 3.23%, #e49539 95.58%)",
                   }}
                 >
-                  Adjuntar
-                  <input
-                    id="file-upload"
-                    type="file"
-                    accept="image/*"
-                    className="hidden"
-                    onChange={handleFileChange}
-                  />
-                </label>
-                <button
+                  <label
+                    htmlFor="file-upload"
+                    className="p-2 bg-[#251525] rounded-[10px] text-white cursor-pointer transition-colors font-afacad w-auto max-w-[200px] flex justify-center items-center"
+                  >
+                    Adjuntar
+                    <input
+                      id="file-upload"
+                      type="file"
+                      accept="image/*"
+                      className="hidden"
+                      onChange={handleFileChange}
+                    />
+                  </label>
+                </div>
+
+                <div
+                  className="relative p-[2px] rounded-[10px] inline-block"
                   style={{
-                    border: "2px solid",
-                    borderImageSource:
-                      "linear-gradient(97.01deg, #b880b5 3.23%, #e49539 95.58%)",
-                    borderImageSlice: 1,
-                    borderRadius: "10px",
+                    background: "linear-gradient(97.01deg, #b880b5 3.23%, #e49539 95.58%)",
                   }}
-                  className="mt-2 p-2 rounded-[10px] text-white transition-colors"
+                  onMouseEnter={() => setIsInstructionsVisible(true)}
+                  onMouseLeave={() => setIsInstructionsVisible(false)}
+                  onClick={() => setIsInstructionsVisible(!isInstructionsVisible)}
                 >
-                  instrucciones
-                </button>
+                  <button
+                  type="button"
+                    className="p-2 bg-[#251525] rounded-[10px] text-white transition-colors font-afacad w-auto max-w-[200px]"
+                  >
+                    Instrucciones
+                  </button>
+
+                  {isInstructionsVisible && (
+                    <div className="absolute left-0 top-full mt-2 w-[300px] p-4 bg-[#251525] text-white rounded-[10px] text-sm shadow-lg z-10">
+                      <p>Envíanos una foto de tu cabello siguiendo estas recomendaciones:</p>
+                      <ul className="mt-2 list-disc list-inside space-y-1">
+                        <li>✅ Con luz natural de día.</li>
+                        <li>✅ Preferiblemente en un exterior.</li>
+                        <li>✅ Tirando tu cabello hacia atrás y de espaldas.</li>
+                        <li>🚫 No uses filtros, flash o luces artificiales.</li>
+                        <li>🚫 No tomes la foto a contraluz.</li>
+                        <li>🚫 Procura que no te ilumine el sol directamente.</li>
+                      </ul>
+                    </div>
+                  )}
+                </div>
               </div>
+
               {selectedFile && (
                 <p className="text-white text-sm mt-2">
                   Archivo seleccionado: {selectedFile.name}
@@ -205,9 +227,10 @@ const ContactForm = ({ isModalOpen, setIsModalOpen }) => {
               )}
             </div>
           </div>
+
           <div className="space-y-4 2xl:space-y-6">
             <div>
-              <label className="block text-white mb-1">Número Telefónico</label>
+              <label className="block text-white mb-1 font-afacad">Número Telefónico</label>
               <input
                 type="tel"
                 name="phone"
@@ -217,10 +240,10 @@ const ContactForm = ({ isModalOpen, setIsModalOpen }) => {
               />
             </div>
             <div>
-              <label className="block text-white mb-1">
+              <label className="block text-white mb-1 font-afacad">
                 Selecciona el Largo de tu Cabello
               </label>
-              <div className="w-full space-y-1 2xl:space-y-2">
+              <div className="w-full space-y-1 2xl:space-y-2 font-afacad">
                 {[
                   { label: "Corto", imageUrl: "/Images/1.avif" },
                   { label: "Medio", imageUrl: "/Images/2.avif" },
@@ -247,20 +270,20 @@ const ContactForm = ({ isModalOpen, setIsModalOpen }) => {
                 ))}
               </div>
             </div>
-            <button
-              type="submit"
+            <div
+              className="mt-5 p-[2px] rounded-xl inline-block"
               style={{
-                border: "2.5px solid",
-                borderImageSource:
-                  "linear-gradient(97.01deg, #b880b5 3.23%, #e49539 95.58%)",
-                borderImageSlice: 1,
-                borderRadius: "10px",
+                background: "linear-gradient(97.01deg, #b880b5 3.23%, #e49539 95.58%)",
               }}
-              className=" h-[98px] flex gap-3 items-center text-[30px] mt-5 p-3 bg-[#B880B580]/60 text-white transition-colors"
             >
-              <img src="/Icons/eye (1).svg" className="hidden lg:block w-[60px] h-auto" />
-              Enviar
-            </button>
+              <button
+                type="submit"
+                className="h-[98px] flex gap-3 items-center text-[30px] p-3 bg-[#B880B580]/60 text-white transition-colors rounded-xl font-[600] w-full"
+              >
+                <img src="/Icons/eye (1).svg" className="hidden lg:block w-[60px] h-auto" />
+                Enviar
+              </button>
+            </div>
           </div>
         </div>
       </form>

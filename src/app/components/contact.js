@@ -12,7 +12,7 @@ const Contact = ({ setIsModalOpen, isModalOpen }) => {
           <h1 className="text-2xl lg:text-[48px] leading-[35px] lg:leading-[80px]">
             un lugar ideado para que explores el estilo que refleja tu esencia.
           </h1>
-          <p className="text-[18px] lg:text-[24px] leading-[34px] lg:leading-[40px] mb-4 font-Vollkorn">
+          <p className="text-[18px] lg:text-[24px] leading-[34px] lg:leading-[40px] mb-4 font-afacad">
             Hola! Soy Nicolle Pity, fundadora de Terciopelo Beauty. He creado
             este espacio pensando en ti, en tus necesidades y en la importancia
             de sentirte realmente espectacular con tu cabello. En este salón, no
@@ -39,7 +39,7 @@ const Contact = ({ setIsModalOpen, isModalOpen }) => {
             Así es como se aseguran resultados espectaculares en Terciopelo
             Beauty
           </h1>
-          <p className="text-[18px] lg:text-[24px] leading-[20px] font-Vollkorn">
+          <p className="text-[18px] lg:text-[24px] leading-[20px] font-afacad">
             Confiar en un nuevo salón es un gran paso, por eso mi enfoque es
             claro y directo, para que cada cliente disfrute de un servicio
             impecable.
@@ -54,7 +54,7 @@ const Contact = ({ setIsModalOpen, isModalOpen }) => {
               <h3 className="text-[20px] md:text-[25px] lg:text-[32px]">
                 Consulta inicial
               </h3>
-              <p className="text-[15px] md:text-[17px] lg:text-[20px] font-Vollkorn">
+              <p className="text-[15px] md:text-[17px] lg:text-[20px] font-afacad">
                 Escucho tus deseos y necesidades para entender el estado de tu
                 cabello y el estilo que quieres lograr.
               </p>
@@ -68,7 +68,7 @@ const Contact = ({ setIsModalOpen, isModalOpen }) => {
               <h3 className="text-[20px] md:text-[25px] lg:text-[32px]">
                 Análisis capilar profundo
               </h3>
-              <p className="text-[15px] md:text-[17px] lg:text-[20px]  font-Vollkorn">
+              <p className="text-[15px] md:text-[17px] lg:text-[20px]  font-afacad">
                 Continúo un microanálisis capilar para entender la salud de tu
                 cabello, asegurando que cualquier tratamiento sea seguro y
                 efectivo.
@@ -83,7 +83,7 @@ const Contact = ({ setIsModalOpen, isModalOpen }) => {
               <h3 className="text-[20px] md:text-[25px] lg:text-[32px]">
                 Plan personalizado
               </h3>
-              <p className="text-[15px] md:text-[17px] lg:text-[20px]  font-Vollkorn">
+              <p className="text-[15px] md:text-[17px] lg:text-[20px]  font-afacad">
                 Construyo un plan de acción adaptado a ti, incluyendo
                 recomendaciones de corte, tinte, o tratamientos según tu tipo de
                 cabello.
@@ -98,7 +98,7 @@ const Contact = ({ setIsModalOpen, isModalOpen }) => {
               <h3 className="text-[20px] md:text-[25px] lg:text-[32px]">
                 Ejecución precisa
               </h3>
-              <p className="text-[15px] md:text-[17px] lg:text-[20px]  font-Vollkorn">
+              <p className="text-[15px] md:text-[17px] lg:text-[20px]  font-afacad">
                 Me aseguro de trabajar con cuidado y excelente técnica para
                 asegurar que el resultado final supere tus expectativas.
               </p>
@@ -112,7 +112,7 @@ const Contact = ({ setIsModalOpen, isModalOpen }) => {
               <h3 className="text-[20px] md:text-[25px] lg:text-[32px]">
                 Seguimiento y cuidado
               </h3>
-              <p className="text-[15px] md:text-[17px] lg:text-[20px]  font-Vollkorn">
+              <p className="text-[15px] md:text-[17px] lg:text-[20px]  font-afacad">
                 Finalizo con consejos y productos para mantener tu look y la
                 salud de tu cabello hasta tu próxima visita.
               </p>

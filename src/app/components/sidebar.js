@@ -15,7 +15,7 @@ const Sidebar = ({ open, isOpen, setIsModalOpen, isModalOpen }) => {
         >
           <img src="/Icons/close-icon.svg" />
         </button>
-        <div className="flex flex-col items-center gap-8 mt-8 text-xl font-light tracking-widest">
+        <div className="flex flex-col items-center gap-8 mt-8 text-xl font-light tracking-widest ">
           <button href="#servicios">
              <a href="https://waze.com/ul?q=Terciopelo Beauty Studio&ll=9.958292,-84.066013&navigate=yes" target="_blank" rel="noopener noreferrer">
               <img src="/Icons/Waze.svg" className="cursor-pointer" alt="Waze" />

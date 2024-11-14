@@ -22,7 +22,7 @@ const TikTok = () => {
 
   return (
     <>
-    <div className="pb-6 ">
+    <div className="my-6 ">
         <div
           className="elfsight-app-ef92d437-3429-48bc-85b9-b374d21c4472"
           data-elfsight-app-lazy

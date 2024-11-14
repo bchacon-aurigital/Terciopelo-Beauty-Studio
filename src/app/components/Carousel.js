@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, lazy } from "react";
+const TikTok = lazy(() => import("./TikTok"));
+
 
 const testimonials = [
   {
@@ -30,14 +32,15 @@ const Carousel = () => {
   };
 
   return (
-    <div id="testimonials" className="flex flex-col items-center py-6 md:py-12 lg:py-20 px-4 md:px-10 lg:px-20">
+    <div className="flex justify-center">
+    <div id="testimonials" className="flex flex-col items-center py-6 md:py-12 lg:py-20 px-4 md:px-10 lg:px-20 max-w-[1600px] justify-center">
       <div className="flex flex-col lg:flex-row items-center lg:items-start space-y-8 lg:space-y-0 lg:space-x-12">
         <div className="text-center lg:text-left">
           <h2 className="text-2xl lg:text-[48px] leading-[30px] md:leading-[60px] font-levaus lg:text-[47px] lg:leading-[80px] text-[#C293C2]">
             LO QUE LAS PERSONAS DICEN <br />
             SOBRE SU TRANSFORMACIÓN Y EXPERIENCIA
           </h2>
-          <p className="mt-4 text-[18px] lg:text-[24px] leading-[30px] lg:leading-[35px] max-w-[700px] font-Vollkorn">
+          <p className="mt-4 text-[18px] lg:text-[24px] leading-[30px] lg:leading-[35px] max-w-[700px] font-afacad">
             Cada cliente vive una experiencia transformadora que va más allá del
             cabello. Lee lo que mis clientes tienen que decir sobre cómo he
             cuidado su estilo, salud capilar y bienestar. Sus palabras reflejan
@@ -85,6 +88,8 @@ const Carousel = () => {
       <h2 className="text-center lg:hidden mt-9 text-[28px] md:text-[35px] font-levaus lg:text-[47px] leading-[80px] text-[#C293C2]">
         Síguenos en TikTok
       </h2>
+      <TikTok/>
+    </div>
     </div>
   );
 };
